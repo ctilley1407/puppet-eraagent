@@ -23,7 +23,8 @@ This module installs the package(s) require for the Eset Remote Management Agent
 
 ### Recommended base parameters
 
-```class { 'eraagent':
+```
+class { 'eraagent':
       eraa_server_hostname      => $eraa_server_hostname,
       eraa_http_proxy_hostname  => $eraa_http_proxy_hostname,
       eraa_http_proxy_port      => $eraa_http_proxy_port
