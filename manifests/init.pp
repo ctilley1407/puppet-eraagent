@@ -37,6 +37,8 @@ class eraagent(
   String $eraa_server_port, 
   Optional[String] $eraa_http_proxy_hostname,
   Optional[String] $eraa_http_proxy_port,
+  Optional[String] $eraa_http_proxy_user,
+  Optional[String] $eraa_http_proxy_pass,
   Boolean $service_enable,
   Enum['running', 'stopped'] $service_ensure,
   Boolean $service_manage,

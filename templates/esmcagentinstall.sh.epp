@@ -1,6 +1,6 @@
 #!/bin/sh -e
 # ESET Security Management Center
-# Copyright (c) 1992-2020 ESET, spol. s r.o. All Rights Reserved
+# Copyright (c) 1992-2021 ESET, spol. s r.o. All Rights Reserved
 
 cleanup_file="$(mktemp -q)"
 finalize()
@@ -33,16 +33,16 @@ eraa_initial_sg_token="MzgyMzc2ZjAtNjQ3NS00MTA4LThhMGUtMmFlNGVjNzFjNmY5zUlZFiyQQ
 eraa_policy_data="eyJwb2xpY3kiOnsiZm9ybWF0IjoiMSIsInZlcnNpb25fbWFqb3IiOiI0Mjk0OTY3Mjk1IiwidmVyc2lvbl9taW5vciI6IjQyOTQ5NjcyOTUiLCJ2ZXJzaW9uX2J1aWxkIjoiNDI5NDk2NzI5NSIsImRhdGEiOnsiZXJhIjp7ImFnZW50Ijp7ImNlX2ZsYWdzIjoiMCIsIm5ldHdvcmsiOnsiY2VfZmxhZ3MiOiIwIiwiaHR0cF9wcm94eV9jb25maWd1cmF0aW9uIjp7ImNlX2ZsYWdzIjoiMCIsInByb3h5X2NvbmZpZ3VyYXRpb25fdHlwZSI6eyJjZV9mbGFncyI6IjQiLCJjZV90eXBlIjoiMiIsImNlX3ZhbHVlIjoiMiJ9LCJwcm94eV9jb25maWd1cmF0aW9uX2dsb2JhbCI6eyJjZV9mbGFncyI6IjQiLCJjb25uZWN0aW9uIjp7ImNlX2ZsYWdzIjoiNCIsImhvc3QiOnsiY2VfZmxhZ3MiOiI0IiwiY2VfdHlwZSI6IjEiLCJjZV92YWx1ZSI6Imxkbi1lc21jMDEuY3JlZGl0MzYwZ2xvYmFsLmNvbSJ9LCJwb3J0Ijp7ImNlX2ZsYWdzIjoiNCIsImNlX3R5cGUiOiI1IiwiY2VfdmFsdWUiOiIzMTI4In19LCJjcmVkZW50aWFscyI6eyJjZV9mbGFncyI6IjQiLCJuYW1lIjp7ImNlX2ZsYWdzIjoiNCIsImNlX3R5cGUiOiIxIiwiY2VfdmFsdWUiOiIifSwicGFzc3dvcmQiOnsiY2VfZmxhZ3MiOiI0IiwiY2VfdHlwZSI6IjEwIiwiY2VfdmFsdWUiOiIifX0sImRpcmVjdF9jb25uZWN0aW9uX2ZhbGxiYWNrIjp7ImNlX2ZsYWdzIjoiNCIsImNlX3R5cGUiOiIwIiwiY2VfdmFsdWUiOiIxIn0sImVuYWJsZWQiOnsiY2VfZmxhZ3MiOiI0IiwiY2VfdHlwZSI6IjAiLCJjZV92YWx1ZSI6IjEifX0sInByb3h5X2NvbmZpZ3VyYXRpb25fcmVwbGljYXRpb24iOnsiY2VfZmxhZ3MiOiI0IiwiY29ubmVjdGlvbiI6eyJjZV9mbGFncyI6IjQiLCJob3N0Ijp7ImNlX2ZsYWdzIjoiNCIsImNlX3R5cGUiOiIxIiwiY2VfdmFsdWUiOiJsZG4tZXNtYzAxLmNyZWRpdDM2MGdsb2JhbC5jb20ifSwicG9ydCI6eyJjZV9mbGFncyI6IjQiLCJjZV90eXBlIjoiNSIsImNlX3ZhbHVlIjoiMzEyOCJ9fSwiY3JlZGVudGlhbHMiOnsiY2VfZmxhZ3MiOiI0IiwibmFtZSI6eyJjZV9mbGFncyI6IjQiLCJjZV90eXBlIjoiMSIsImNlX3ZhbHVlIjoiIn0sInBhc3N3b3JkIjp7ImNlX2ZsYWdzIjoiNCIsImNlX3R5cGUiOiIxMCIsImNlX3ZhbHVlIjoiIn19LCJkaXJlY3RfY29ubmVjdGlvbl9mYWxsYmFjayI6eyJjZV9mbGFncyI6IjQiLCJjZV90eXBlIjoiMCIsImNlX3ZhbHVlIjoiMCJ9LCJlbmFibGVkIjp7ImNlX2ZsYWdzIjoiNCIsImNlX3R5cGUiOiIwIiwiY2VfdmFsdWUiOiIxIn19LCJwcm94eV9jb25maWd1cmF0aW9uX2VzZXRfc2VydmljZXMiOnsiY2VfZmxhZ3MiOiI0IiwiY29ubmVjdGlvbiI6eyJjZV9mbGFncyI6IjQiLCJob3N0Ijp7ImNlX2ZsYWdzIjoiNCIsImNlX3R5cGUiOiIxIiwiY2VfdmFsdWUiOiJsZG4tZXNtYzAxLmNyZWRpdDM2MGdsb2JhbC5jb20ifSwicG9ydCI6eyJjZV9mbGFncyI6IjQiLCJjZV90eXBlIjoiNSIsImNlX3ZhbHVlIjoiMzEyOCJ9fSwiY3JlZGVudGlhbHMiOnsiY2VfZmxhZ3MiOiI0IiwibmFtZSI6eyJjZV9mbGFncyI6IjQiLCJjZV90eXBlIjoiMSIsImNlX3ZhbHVlIjoiIn0sInBhc3N3b3JkIjp7ImNlX2ZsYWdzIjoiNCIsImNlX3R5cGUiOiIxMCIsImNlX3ZhbHVlIjoiIn19LCJkaXJlY3RfY29ubmVjdGlvbl9mYWxsYmFjayI6eyJjZV9mbGFncyI6IjQiLCJjZV90eXBlIjoiMCIsImNlX3ZhbHVlIjoiMCJ9LCJlbmFibGVkIjp7ImNlX2ZsYWdzIjoiNCIsImNlX3R5cGUiOiIwIiwiY2VfdmFsdWUiOiIxIn19fX19LCJjZV92ZXJzaW9uX21ham9yIjoiNyIsImNlX3ZlcnNpb25fbWlub3IiOiIxIiwiY2VfdmVyc2lvbl9idWlsZCI6IjAifX19fQ=="
 
 arch=$(uname -m)
-eraa_installer_url="http://repository.eset.com/v1/com/eset/apps/business/era/agent/v7/7.2.2233.0/agent_linux_i386.sh"
-eraa_installer_checksum="591b4e374766019489c12222b298d25292fe2088"
+eraa_installer_url="http://repository.eset.com/v1/com/eset/apps/business/era/agent/v8/8.1.2209.0/agent_linux_i386.sh"
+eraa_installer_checksum="4c879479983a48669f09adbd6488c0770b7c5be6"
 
 if $(echo "$arch" | grep -E "^(x86_64|amd64)$" 2>&1 > /dev/null)
 then
     eraa_installer_url="http://repository.eset.com/v1/com/eset/apps/business/era/agent/v7/7.2.2233.0/agent_linux_x86_64.sh"
-    eraa_installer_checksum="d766d60393dad94791208e6515cc91feaa226eab"
+    eraa_installer_checksum="8dc01782197f69654a0deef2d2c46d8245bb7163"
 fi
 
-echo "ESET Management Agent live installer script. Copyright © 1992-2020 ESET, spol. s r.o. - All rights reserved."
+echo "ESET Management Agent live installer script. Copyright © 1992-2021 ESET, spol. s r.o. - All rights reserved."
 
 if test ! -z $eraa_server_company_name
 then
@@ -70,9 +70,12 @@ fi
 
 local_installer="$(mktemp -q -u)"
 
-
 <% if $eraagent::eraa_http_proxy_hostname { -%>
-  eraa_http_proxy_value="http://<%= $eraagent::eraa_http_proxy_hostname %>:<%= $eraagent::eraa_http_proxy_port %>"
+  <% if $eraagent::eraa_http_proxy_user and $eraagent::eraa_http_proxy_pass { -%>
+    eraa_http_proxy_value="http://<%= $eraagent::eraa_http_proxy_user %>:<%= $eraagent::eraa_http_proxy_pass %>@<%= $eraagent::eraa_http_proxy_hostname %>:<%= $eraagent::eraa_http_proxy_port %>"
+  <% } else { -%>
+    eraa_http_proxy_value="http://<%= $eraagent::eraa_http_proxy_hostname %>:<%= $eraagent::eraa_http_proxy_port %>"
+  <% } %>
 <% } else { -%>
   eraa_http_proxy_value=""
 <% } %>
@@ -98,38 +101,6 @@ echo -n "Checking integrity of installer script " && echo "$eraa_installer_check
 
 chmod +x "$local_installer"
 
-local_migration_list="$(mktemp -q -u)"
-tee "$local_migration_list" 2>&1 > /dev/null << __LOCAL_MIGRATION_LIST__
-
-__LOCAL_MIGRATION_LIST__
-test $? = 0 && echo "$local_migration_list" >> "$cleanup_file"
-
-for dir in /sys/class/net/*/
-do
-    if test -f "$dir/address"
-    then
-        grep -E '00:00:00:00:00:00' "$dir/address" > /dev/null || macs="$macs $(sed 's/\://g' "$dir/address" | awk '{print toupper($0)}')"
-    fi
-done
-
-while read line
-do
-    if test -n "$macs" -a -n "$line"
-    then
-        mac=$(echo $line | awk '{print $1}')
-        uuid=$(echo $line | awk '{print $2}')
-        lsid=$(echo $line | awk '{print $3}')
-        if $(echo "$macs" | grep "$mac" > /dev/null)
-        then
-            if test -n "$mac" -a -n "$uuid" -a -n "$lsid"
-            then
-                additional_params="--product-guid $uuid --log-sequence-id $lsid"
-                break
-            fi
-        fi
-    fi
-done < "$local_migration_list"
-
 command -v sudo > /dev/null && usesudo="sudo -E" || usesudo=""
 
 export _ERAAGENT_PEER_CERT_PASSWORD="$eraa_peer_cert_pwd"
@@ -147,7 +118,11 @@ $usesudo /bin/sh "$local_installer"\
    --cert-password-is-base64\
    --initial-static-group "$eraa_initial_sg_token"\
 <% if $eraagent::eraa_http_proxy_hostname { -%>
-   --proxy-hostname "<%= $eraagent::eraa_http_proxy_hostname %>" --proxy-port <%= $eraagent::eraa_http_proxy_port %> \
+  <% if $eraagent::eraa_http_proxy_auth { -%>
+    --proxy-hostname "<%= $eraagent::eraa_http_proxy_hostname %>" --proxy-port <%= $eraagent::eraa_http_proxy_port %> --proxy-user "<%= $eraagent::eraa_http_proxy_user %>" --proxy-password "<%= $eraagent::eraa_http_proxy_pass %>" \
+  <% } else { -%>
+    --proxy-hostname "<%= $eraagent::eraa_http_proxy_hostname %>" --proxy-port <%= $eraagent::eraa_http_proxy_port %> \
+  <% } -%>
 <% } -%>
    --enable-imp-program\
    $(test -n "$local_ca_path" && echo --cert-auth-path "$local_ca_path")\
