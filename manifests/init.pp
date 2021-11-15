@@ -33,17 +33,17 @@
 #   include eraagent
 class eraagent(
   String $eraa_server_hostname,
-  String $eraa_server_company_name,
   String $eraa_server_port, 
-  Optional[String] $eraa_http_proxy_hostname,
-  Optional[String] $eraa_http_proxy_port,
-  Optional[String] $eraa_http_proxy_user,
-  Optional[String] $eraa_http_proxy_pass,
+  Optional[String] $eraa_server_company_name = undef,
+  Optional[String] $eraa_http_proxy_hostname = undef,
+  Optional[String] $eraa_http_proxy_port = undef,
+  Optional[String] $eraa_http_proxy_user = undef,
+  Optional[String] $eraa_http_proxy_pass = undef,
   Boolean $service_enable,
   Enum['running', 'stopped'] $service_ensure,
   Boolean $service_manage,
   String $service_name,
-  Optional[String] $service_provider,
+  Optional[String] $service_provider = undef,
   Boolean $service_hasstatus,
   Boolean $service_hasrestart
 ){
