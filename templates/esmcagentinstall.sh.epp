@@ -71,13 +71,13 @@ fi
 local_installer="$(mktemp -q -u)"
 
 <% if $eraagent::eraa_http_proxy_hostname { -%>
-  <% if $eraagent::eraa_http_proxy_user and $eraagent::eraa_http_proxy_pass { -%>
-    eraa_http_proxy_value="http://<%= $eraagent::eraa_http_proxy_user %>:<%= $eraagent::eraa_http_proxy_pass %>@<%= $eraagent::eraa_http_proxy_hostname %>:<%= $eraagent::eraa_http_proxy_port %>"
-  <% } else { -%>
-    eraa_http_proxy_value="http://<%= $eraagent::eraa_http_proxy_hostname %>:<%= $eraagent::eraa_http_proxy_port %>"
-  <% } %>
+<% if $eraagent::eraa_http_proxy_user and $eraagent::eraa_http_proxy_pass { -%>
+eraa_http_proxy_value="http://<%= $eraagent::eraa_http_proxy_user %>:<%= $eraagent::eraa_http_proxy_pass %>@<%= $eraagent::eraa_http_proxy_hostname %>:<%= $eraagent::eraa_http_proxy_port %>"
 <% } else { -%>
-  eraa_http_proxy_value=""
+eraa_http_proxy_value="http://<%= $eraagent::eraa_http_proxy_hostname %>:<%= $eraagent::eraa_http_proxy_port %>"
+<% } %>
+<% } else { -%>
+eraa_http_proxy_value=""
 <% } %>
 
 echo "Downloading ESET Management Agent installer..."
@@ -119,9 +119,9 @@ $usesudo /bin/sh "$local_installer"\
    --initial-static-group "$eraa_initial_sg_token"\
 <% if $eraagent::eraa_http_proxy_hostname { -%>
   <% if $eraagent::eraa_http_proxy_auth { -%>
-    --proxy-hostname "<%= $eraagent::eraa_http_proxy_hostname %>" --proxy-port <%= $eraagent::eraa_http_proxy_port %> --proxy-user "<%= $eraagent::eraa_http_proxy_user %>" --proxy-password "<%= $eraagent::eraa_http_proxy_pass %>" \
+   --proxy-hostname "<%= $eraagent::eraa_http_proxy_hostname %>" --proxy-port <%= $eraagent::eraa_http_proxy_port %> --proxy-user "<%= $eraagent::eraa_http_proxy_user %>" --proxy-password "<%= $eraagent::eraa_http_proxy_pass %>" \
   <% } else { -%>
-    --proxy-hostname "<%= $eraagent::eraa_http_proxy_hostname %>" --proxy-port <%= $eraagent::eraa_http_proxy_port %> \
+   --proxy-hostname "<%= $eraagent::eraa_http_proxy_hostname %>" --proxy-port <%= $eraagent::eraa_http_proxy_port %> \
   <% } -%>
 <% } -%>
    --enable-imp-program\
