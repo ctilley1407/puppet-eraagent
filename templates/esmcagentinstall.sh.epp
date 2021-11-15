@@ -118,11 +118,11 @@ $usesudo /bin/sh "$local_installer"\
    --cert-password-is-base64\
    --initial-static-group "$eraa_initial_sg_token"\
 <% if $eraagent::eraa_http_proxy_hostname { -%>
-  <% if $eraagent::eraa_http_proxy_auth { -%>
+<% if $eraagent::eraa_http_proxy_auth { -%>
    --proxy-hostname "<%= $eraagent::eraa_http_proxy_hostname %>" --proxy-port <%= $eraagent::eraa_http_proxy_port %> --proxy-user "<%= $eraagent::eraa_http_proxy_user %>" --proxy-password "<%= $eraagent::eraa_http_proxy_pass %>" \
-  <% } else { -%>
+<% } else { -%>
    --proxy-hostname "<%= $eraagent::eraa_http_proxy_hostname %>" --proxy-port <%= $eraagent::eraa_http_proxy_port %> \
-  <% } -%>
+<% } -%>
 <% } -%>
    --enable-imp-program\
    $(test -n "$local_ca_path" && echo --cert-auth-path "$local_ca_path")\
